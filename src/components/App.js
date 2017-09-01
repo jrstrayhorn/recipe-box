@@ -1,9 +1,14 @@
 import { Component } from 'react'
+import Header from './ui/Header'
+import Footer from './ui/Footer'
 
 class App extends Component {
     render() {
         return (
-            <h1>Hello World</h1>
+            <div className="container">
+                <Header title="Recipe Box" />
+                <Footer />
+            </div>
         )
     }
 }
