@@ -1,4 +1,4 @@
-const contants = {
+const constants = {
     ADD_RECIPE: "ADD_RECIPE"
 }
 
