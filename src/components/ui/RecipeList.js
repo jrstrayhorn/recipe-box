@@ -1,3 +1,5 @@
+import Recipe from './Recipe'
+
 const RecipeList = ({ recipes=[] }) => (
     <div className="row pad-row side-pad-row">
         {(recipes.length === 0) ?
@@ -5,7 +7,9 @@ const RecipeList = ({ recipes=[] }) => (
             <div>
             <p>Click on the recipe to edit.</p>
             {recipes.map(recipe =>
-                <h1>{recipe.name}</h1>
+                <Recipe key={recipe.id}
+                    {...recipe}
+                />
             )}
             </div>
         }
