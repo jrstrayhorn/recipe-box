@@ -1,4 +1,6 @@
-const AddRecipeForm = ({onNewRecipe}) => {
+import { PropTypes } from 'react'
+
+const AddRecipeForm = ({onNewRecipe=f=>f}) => {
     
     // local variables for ref
     let _name, _ingredients
@@ -34,6 +36,10 @@ const AddRecipeForm = ({onNewRecipe}) => {
             </form>
         </div>
     )
+}
+
+AddRecipeForm.propTypes = {
+    onNewRecipe: PropTypes.func
 }
 
 export default AddRecipeForm

@@ -13,10 +13,8 @@ export const NewRecipe = connect(
 )(AddRecipeForm)
 
 export const Recipes = connect(
-    state => {
-        console.log(state);
-        return ({
+    state => ({
         recipes: [...state]
-    })},
+    }),
     null
 )(RecipeList)
