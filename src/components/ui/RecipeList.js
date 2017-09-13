@@ -1,6 +1,6 @@
 import Recipe from './Recipe'
 
-const RecipeList = ({ recipes=[] }) => (
+const RecipeList = ({ recipes=[], onRemove=f=>f }) => (
     <div className="row pad-row side-pad-row">
         {(recipes.length === 0) ?
             <p>No Recipes Listed. (Please add a recipe)</p> :
@@ -9,6 +9,7 @@ const RecipeList = ({ recipes=[] }) => (
             {recipes.map(recipe =>
                 <Recipe key={recipe.id}
                     {...recipe}
+                    onRemove={() => onRemove(recipe.id)}
                 />
             )}
             </div>

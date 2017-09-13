@@ -1,9 +1,9 @@
-const Recipe = ({ id, name, ingredients}) => {
+const Recipe = ({ id, name, ingredients, onRemove=f=>f}) => {
     return (
         <div className="panel panel-primary">
             <div className="panel-heading">
                 <h3 className="panel-title">{name}</h3>
-                <button
+                <button onClick={onRemove}
                     className="btn btn-danger pull-right">
                     <span className="glyphicon glyphicon-remove"
                             aria-hidden="true">

@@ -20,6 +20,10 @@ export const recipes = (state=[], action) => {
                 ...state,
                 recipe({}, action)
             ]
+        case C.REMOVE_RECIPE:
+            return state.filter(
+                r => r.id !== action.id
+            )
         default:
         return state
     }

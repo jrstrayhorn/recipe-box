@@ -8,3 +8,9 @@ export const addRecipe = (name, ingredients) =>
     name,
     ingredients
 })
+
+export const removeRecipe = id =>
+({
+    type: C.REMOVE_RECIPE,
+    id
+})
