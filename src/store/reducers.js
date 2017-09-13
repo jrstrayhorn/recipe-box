@@ -28,3 +28,12 @@ export const recipes = (state=[], action) => {
         return state
     }
 }
+
+export const edit = (state="", action) => {
+    switch (action.type) {
+        case C.SET_EDIT:
+            return action.id
+        default:
+            return state
+    }
+}
