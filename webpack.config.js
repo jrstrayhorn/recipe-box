@@ -7,7 +7,8 @@ module.exports = {
     output: {
         path: "dist/assets",
         filename: "bundle.js",
-        sourceMapFilename: "bundle.map"
+        sourceMapFilename: "bundle.map",
+        publicPath: 'assets/'
     },
     devtool: "#source-map",
     module: {
